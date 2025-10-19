@@ -1,0 +1,8 @@
+Sección 12: Next.js + Strapi.io CMS: Frontend
+
+Para subirlo a GitHub
+git add .
+get commit -m "Sección 12: Next.js + Strapi.io CMS: Frontend"
+git remote add origin https://github.com/RogerBatistaCaceres/next13-strapi.git
+git branch -M main
+git push -u origin main
