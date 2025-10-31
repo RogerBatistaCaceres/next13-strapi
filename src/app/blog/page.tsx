@@ -1,7 +1,7 @@
 import PageHeader from "@/components/PageHeader";
-import { fetchApi } from "../helpers/fetch-api";
+import { fetchApi } from "../../helpers/fetch-api";
 import PageCardImage from "@/components/PageCardImage";
-import { Post } from "../interfaces/post";
+import { Post } from "../../interfaces/post";
 import PagePagination from "@/components/PagePagination";
 
 const getData = async (page = 1, pageSize = 2) => {
@@ -34,7 +34,7 @@ interface Props {
 }
 
 const Blog = async ({ searchParams }: Props) => {
-  const { page } = searchParams;
+  const { page } = await searchParams;
   // const data = await getData();
   // data está dentro de un data.data, por eso podemos hacer un destructurin
   let pageNumber = page ? parseInt(page) : 1;

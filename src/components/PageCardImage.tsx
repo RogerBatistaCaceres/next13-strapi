@@ -1,4 +1,4 @@
-import { Post } from "@/app/interfaces/post";
+import { Post } from "@/interfaces/post";
 import Image from "next/image";
 import Link from "next/link";
 

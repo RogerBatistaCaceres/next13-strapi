@@ -1,4 +1,4 @@
-import { getStrapiURL } from "../helpers/api-helper";
+import { getStrapiURL } from "../../helpers/api-helper";
 
 const getData = async () => {
   const url = getStrapiURL("/api/posts");

@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+// Esto adiciona una barra de carga (loader) en la parte superior de la pantalla
+import NextTopLoader from "nextjs-toploader";
+import PageTransition from "@/components/PageTransition";
+import Header from "@/components/Header";
+import CartProvider from "@/context/CartContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +32,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="container mx-auto max-w-2xl">{children}</main>
+        <NextTopLoader color="#000" />
+        <main className="container mx-auto max-w-2xl mt-4 space-y-4">
+          <CartProvider>
+            <Header />
+            <PageTransition>{children}</PageTransition>
+          </CartProvider>
+        </main>
       </body>
     </html>
   );

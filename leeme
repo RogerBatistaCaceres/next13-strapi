@@ -9,3 +9,11 @@ git push -u origin main
 
 Aplicación deployed in vercel..
 https://next13-strapi.vercel.app/blog
+
+nextjs-toploader --> para agregar una barra de actualización en la parte superior
+
+framer-motion --> para darle movimiento a los
+
+clsx --> se utiliza principalmente para construir cadenas de className condicionalmente (ifthen)
+tailwind-merge --> se utiliza para combinar clases de Tailwind CSS
+flowbite --> Es una biblioteca de componentes creada con Tailwind CSS, https://flowbite.com/

@@ -1,3 +1,4 @@
+import { cn } from "@/helpers/classnames";
 import Link from "next/link";
 
 interface Props {
@@ -27,9 +28,14 @@ const PagePagination = ({ pagination }: Props) => {
         <li>
           <Link
             href={page === 1 ? `/blog?page=${page}` : `/blog?page=${page - 1}`}
-            className={`${classPrevious} ${
-              page === 1 ? "opacity-50 pointer-events-none" : ""
-            }`}
+            //            className={`${classPrevious} ${
+            //              page === 1 ? "opacity-50 pointer-events-none" : ""
+            //            }`}
+            // Esto es lo mismo que arriba pero utilizando los helpers que hemos creado
+            // CLSX y taildwind-merge
+            className={cn(classPrevious, {
+              "opacity-50 pointer-events-none": page === 1,
+            })}
           >
             Previous
           </Link>
@@ -54,9 +60,15 @@ const PagePagination = ({ pagination }: Props) => {
                 ? `/blog?page=${pageCount}`
                 : `/blog?page=${page + 1}`
             }
-            className={`${classNext} ${
-              page === pageCount ? "opacity-50 pointer-events-none" : ""
-            }`}
+            //            className={`${classNext} ${
+            //              page === pageCount ? "opacity-50 pointer-events-none" : ""
+            //            }`}
+            // Esto es lo mismo que arriba pero utilizando los helpers que hemos creado
+            // CLSX y taildwind-merge
+
+            className={cn(classNext, {
+              "opacity-50 pointer-events-none": page === pageCount,
+            })}
           >
             Next
           </Link>

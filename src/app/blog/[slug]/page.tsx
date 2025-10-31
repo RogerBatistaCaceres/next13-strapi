@@ -1,7 +1,7 @@
-import { getStrapiURL } from "@/app/helpers/api-helper";
-import { fetchApi } from "@/app/helpers/fetch-api";
-import { formatDate } from "@/app/helpers/format-date-helper";
-import { Post } from "@/app/interfaces/post";
+import { getStrapiURL } from "@/helpers/api-helper";
+import { fetchApi } from "@/helpers/fetch-api";
+import { formatDate } from "@/helpers/format-date-helper";
+import { Post } from "@/interfaces/post";
 import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
 import { notFound } from "next/navigation";
