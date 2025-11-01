@@ -42,14 +42,14 @@ const PageCardStore = ({ book }: Props) => {
         <p className="text-gray-500 mb-2 text-lg">Precio: ${price}</p>
         <p className="text-gray-500 mb-2 text-lg">Stock: {stock} unidades</p>
         {/*JSON.stringify(description)*/}
-        {/*description.map((block, i) => (
+        {description.map((block, i) => (
           <p
             key={i}
             className="mb-3 font-normal text-gray-700 dark:text-gray-400"
           >
-            {block.children.map((child, j) => child.text).join(" ")}
+            {block.children?.map((child, j) => child.text).join(" ")}
           </p>
-        ))*/}
+        ))}
         <button
           className={cn(
             "inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800",

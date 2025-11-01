@@ -1,7 +1,13 @@
+interface stringNode {
+  type: string;
+  text?: string;
+  children?: stringNode[];
+}
+
 export interface Book {
   id: number;
   title: string;
-  description: string;
+  description: stringNode[];
   slug: string;
   price: number;
   stock: number;

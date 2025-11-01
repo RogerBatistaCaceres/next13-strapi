@@ -22,7 +22,7 @@ const getBooks = async (page = 1, pageSize = 4) => {
 };
 
 const Store = async ({ searchParams }: { searchParams: { page?: string } }) => {
-  const { page } = searchParams;
+  const { page } = await searchParams;
   let pageNumber = page ? parseInt(page) : 1;
   if (isNaN(pageNumber) || pageNumber < 1) {
     pageNumber = 1;
